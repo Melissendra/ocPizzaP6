@@ -90,9 +90,9 @@ VALUES('La tempete',
        ('oeuf', 3, NULL),
        ('mozzarella', 4, NULL),
        ('Au pays des bretons',
-        (SELECT id FROM public.stock WHERE (quantity = 5) AND (id_restaurant = 1)),
+        11,
         (SELECT id FROM public.recipe WHERE recipe_name = 'Au pays des Bretons')),
-       ('pate à  pizza', (SELECT id WHERE quantity = 50000), NULL),
+       ('pate à  pizza', (SELECT id FROM public.stock WHERE quantity = 50000), NULL),
        ('glace macadamia', (SELECT id FROM public.stock WHERE unity = 'pot'), NULL);
 
 
@@ -102,9 +102,9 @@ VALUES (150, 'gramme', 1, 1),
        (100, 'gramme', 2, 3),
        (1,'unit', 7, 2);
 
-INSERT INTO public.basket_line(basket_date, product_amount, price, order_number_order, id_product)
-VALUES ('12-05-2019', 4, 25.00, 1, (SELECT id FROM public.product WHERE product_name = 'La Tempete')),
-       ('23-02-2020', 1, 12.5, 2, (SELECT id FROM public.product WHERE product_name = 'coca cola')),
-       ('05-03-2020', 3, 18.50, 3, (SELECT id FROM public.product WHERE product_name = 'Le soleil brille')),
-       ('29-04-2020', 1, 8.50, 4, (SELECT id FROM public.product WHERE product_name = 'Au pay des bretons')),
-       ('15-12-2019', 6, 30.25, 5, (SELECT id FROM public.product WHERE product_name = 'Le soleil brille'));
+INSERT INTO public.basket_line(basket_date, product_amount, price, id_order, id_product)
+VALUES ('12-05-2019', 4, 25.00, 1, 1),
+       ('23-02-2020', 1, 12.5, 2,2),
+       ('05-03-2020', 3, 18.50, 3, 3),
+       ('29-04-2020', 1, 8.50, 4, 6),
+       ('15-12-2019', 6, 30.25, 5, 3);
