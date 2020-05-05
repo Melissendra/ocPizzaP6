@@ -48,42 +48,52 @@ VALUES('En attente'),
 
 INSERT INTO public.order(order_date, paiement_state, delivery, id_restaurant, id_address, id_payment_mean_table, id_order_state)
 VALUES ('19-05-2019', TRUE, FALSE, 1, 1, 1, 3),
+       ('10-04-2020', TRUE, FALSE, 2, 3, 1, 1),
         ('29-12-2018', FALSE, TRUE, 2, 2, 2, 4 ),
+       ('25-02-2020', FALSE, FALSE, 1, 5, 3, 3),
         ('25-03-2019', TRUE, TRUE, 3, 3, 1, 5),
+       ('12-01-2020', TRUE, TRUE, 2, 3, 3, 4),
+       ('05-05-2020', TRUE, TRUE, 1, 4, 2, 5),
         ('23-10-2019', TRUE, FALSE, 1, 4, 3, 2),
         ('10-04-2020', FALSE, TRUE, 2, 5, 2, 1);
 
 INSERT INTO public.stock(quantity, unity, price_per_unit, id_restaurant)
 VALUES (2000, 'gramme', 0.1, 1),
        (4, 'boite', 0.30, 2),
+       (1, 'boite', 0.30, 1),
+       (5, 'cannette',1.5,  2),
        (100, 'gramme', 0.10, 3),
        (1000, 'gramme', 0.20, 1),
-       (5000, 'gramme', 0.03, 3),
+       (50000, 'gramme', 0.03, 3),
        (600, 'gramme', 0.02, 2),
-       (10, 'unit', 0.25, 1);
+       (10, 'unit', 0.25, 1),
+       (10, 'unit', 0.25, 3),
+       (5, 'unit', 0.25, 2),
+       (20, 'pot', 2.25, 1),
+       (50, 'egg_unit', 0.10, 3),
+       (20, 'egg_unit', 0.10, 3);
 
 
 INSERT INTO public.recipe(recipe_name, description)
-VALUES('La tempete', ' '),
-       ('Le soleil brille', ' '),
-       ('Au pays des bretons', ' ');
+VALUES('La tempete', 'pate à pizza, sauce tomate, peperonni, chorizo, origan, mozzarella'),
+       ('Le soleil brille', 'pate à pizza, sauce tomate, jambon, champignons, oeuf, roquefort '),
+       ('Au pays des bretons', 'pate à pizza, crème fraiche, saumon, aneth, mozzarella');
 
-INSERT INTO public.product(product_name, ingredient_name, id_stock)
-VALUES('La tempete', 'pate à pizza', 3),
-       ('La tempete', 'mozzarella', 1),
-       ('La tempete', 'saumon', 2),
-       ('La tempete', 'aneth', 1),
-       ('Le soleil brille', 'pate à pizza',3),
-       ('Le soleil brille', 'sauce tomate', 3),
-       ('Le soleil brille', 'oeuf', 3),
-       ('Le soleil brille', 'jambon', 3),
-       ('Le soleil brille', 'mozarella', 3),
-       ('Au pays des bretons', 'pate à pizza', 4),
-        ('Au pays des bretons', 'sauce tomate', 4),
-       ('Au pays des bretons', 'andouille', 4),
-       ('Au pays des bretons', 'mozzarella', 4),
-       ('Au pays des bretons', 'origan', 4);
-
+INSERT INTO public.product(product_name, id_stock, id_recipe)
+VALUES('La tempete',
+       (SELECT id FROM public.stock WHERE (quantity = 10) AND (id_restaurant = 1)),
+       (SELECT id FROM public.recipe WHERE recipe_name = 'La Tempete')),
+       ('coca cola', 3, NULL),
+       ('Le soleil brille',
+        (SELECT id FROM public.stock WHERE (quantity = 10) AND (id_restaurant = 3)),
+        (SELECT id FROM public.recipe WHERE recipe_name = 'Le soleil brille')),
+       ('oeuf', 3, NULL),
+       ('mozzarella', 4, NULL),
+       ('Au pays des bretons',
+        (SELECT id FROM public.stock WHERE (quantity = 5) AND (id_restaurant = 1)),
+        (SELECT id FROM public.recipe WHERE recipe_name = 'Au pays des Bretons')),
+       ('pate à  pizza', (SELECT id WHERE quantity = 50000), NULL),
+       ('glace macadamia', (SELECT id FROM public.stock WHERE unity = 'pot'), NULL);
 
 
 INSERT INTO public.product_ingredient(ingredient_quantity, measure_unity, id_ingredient, id_product)
@@ -93,8 +103,8 @@ VALUES (150, 'gramme', 1, 1),
        (1,'unit', 7, 2);
 
 INSERT INTO public.basket_line(basket_date, product_amount, price, order_number_order, id_product)
-VALUES ('12-05-2019', 4, 25.00, 1, 3),
-       ('23-02-2020', 2, 12.5, 2, 6),
-       ('05-03-2020', 3, 18.50, 3, 8),
-       ('29-04-2020', 1, 8.50, 4, 2),
-       ('15-12-2019', 6, 30.25, 5, 12);
+VALUES ('12-05-2019', 4, 25.00, 1, (SELECT id FROM public.product WHERE product_name = 'La Tempete')),
+       ('23-02-2020', 1, 12.5, 2, (SELECT id FROM public.product WHERE product_name = 'coca cola')),
+       ('05-03-2020', 3, 18.50, 3, (SELECT id FROM public.product WHERE product_name = 'Le soleil brille')),
+       ('29-04-2020', 1, 8.50, 4, (SELECT id FROM public.product WHERE product_name = 'Au pay des bretons')),
+       ('15-12-2019', 6, 30.25, 5, (SELECT id FROM public.product WHERE product_name = 'Le soleil brille'));
