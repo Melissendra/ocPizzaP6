@@ -9,12 +9,12 @@ VALUES ('pizzaiolo'),
         ('client'),
         ('manager');
 
-INSERT INTO public.user(lastname, firstname, birthday, user_category, used_password, active)
-VALUES ( 'Lacroix', 'Tristan', '1998-30-03', 1, 'IdBX6UT', TRUE),
-        ( 'Dufour', 'Emilie', '1984-25-12', 2, '06Jv2uV1', TRUE),
-        ( 'Louis', 'Jacques', '1997-30-06', 3, 'K5wkf45W', FALSE),
-        ( 'Blot', 'Hughes', '1980-29-05', 4, 'kzN9McLXIIv5', TRUE),
-        ( 'Pichon', 'Capucine', '1970-26-01', 3, 'aYkrEZ', TRUE);
+INSERT INTO public.user(lastname, firstname, birthday, used_password, active, id_category, id_restaurant)
+VALUES ( 'Lacroix', 'Tristan', '1998-30-03', 'IdBX6UT', TRUE, 1, 1),
+        ( 'Dufour', 'Emilie', '1984-25-12', '06Jv2uV1', TRUE, 2, 2),
+        ( 'Louis', 'Jacques', '1997-30-06', 'K5wkf45W', FALSE, 3, 3),
+        ( 'Blot', 'Hughes', '1980-29-05', 'kzN9McLXIIv5', TRUE, 4, 1),
+        ( 'Pichon', 'Capucine', '1970-26-01', 'aYkrEZ', TRUE, 3, 2);
 
 INSERT INTO public.address(street_number, street_name,zip_code, city, phone_number, mail, id_user, id_restaurant)
 VALUES ('5', 'rue Noël Barbier', '45895', 'Chartier', '06 37 38 03 50', 'tristan24@free.fr',
@@ -104,7 +104,9 @@ VALUES (150, 'gramme', 1, 1),
 
 INSERT INTO public.basket_line(basket_date, product_amount, price, id_order, id_product)
 VALUES ('12-05-2019', 4, 25.00, 1, 1),
-       ('23-02-2020', 1, 12.5, 2,2),
+       ('12-05-2019', 4, 12.00, 1, 2),
+       ('23-02-2020', 1, 12.5, 2, 3),
+       ('23-02-2020', 1, 5, 2, 8),
        ('05-03-2020', 3, 18.50, 3, 3),
        ('29-04-2020', 1, 8.50, 4, 6),
        ('15-12-2019', 6, 30.25, 5, 3);
