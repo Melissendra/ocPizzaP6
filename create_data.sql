@@ -1,9 +1,5 @@
 -- Database generated with pgModeler (PostgreSQL Database Modeler).
-<<<<<<< HEAD
--- pgModeler  version: 0.9.2
-=======
 -- pgModeler  version: 0.9.3-alpha
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- PostgreSQL version: 12.0
 -- Project Site: pgmodeler.io
 -- Model Author: ---
@@ -31,11 +27,7 @@ CREATE TABLE public.restaurant (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.restaurant OWNER TO postgres;
-=======
 ALTER TABLE public.restaurant OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: public."user" | type: TABLE --
@@ -45,7 +37,6 @@ CREATE TABLE public."user" (
 	lastname varchar(255) NOT NULL,
 	firstname varchar(255) NOT NULL,
 	birthday varchar(255) NOT NULL,
-	user_category varchar(100) NOT NULL,
 	used_password varchar(255),
 	active boolean NOT NULL,
 	id_restaurant integer,
@@ -54,11 +45,7 @@ CREATE TABLE public."user" (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public."user" OWNER TO postgres;
-=======
 ALTER TABLE public."user" OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: restaurant_fk | type: CONSTRAINT --
@@ -77,11 +64,7 @@ CREATE TABLE public.category (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.category OWNER TO postgres;
-=======
 ALTER TABLE public.category OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: category_fk | type: CONSTRAINT --
@@ -107,11 +90,7 @@ CREATE TABLE public.address (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.address OWNER TO postgres;
-=======
 ALTER TABLE public.address OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: user_fk | type: CONSTRAINT --
@@ -148,11 +127,7 @@ CREATE TABLE public."order" (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public."order" OWNER TO postgres;
-=======
 ALTER TABLE public."order" OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: restaurant_fk | type: CONSTRAINT --
@@ -178,11 +153,7 @@ CREATE TABLE public.payment_mean_table (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.payment_mean_table OWNER TO postgres;
-=======
 ALTER TABLE public.payment_mean_table OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: public.order_state | type: TABLE --
@@ -194,11 +165,7 @@ CREATE TABLE public.order_state (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.order_state OWNER TO postgres;
-=======
 ALTER TABLE public.order_state OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: payment_mean_table_fk | type: CONSTRAINT --
@@ -221,11 +188,7 @@ CREATE TABLE public.basket_line (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.basket_line OWNER TO postgres;
-=======
 ALTER TABLE public.basket_line OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: public.product | type: TABLE --
@@ -233,20 +196,12 @@ ALTER TABLE public.basket_line OWNER TO postgres;
 CREATE TABLE public.product (
 	id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT BY 1 MINVALUE 0 MAXVALUE 2147483647 START WITH 1 CACHE 1 ),
 	product_name varchar(255),
-<<<<<<< HEAD
-=======
-	id_stock integer NOT NULL,
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 	id_recipe integer,
 	CONSTRAINT product_pk PRIMARY KEY (id)
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.product OWNER TO postgres;
-=======
 ALTER TABLE public.product OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: order_fk | type: CONSTRAINT --
@@ -275,11 +230,7 @@ CREATE TABLE public.product_ingredient (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.product_ingredient OWNER TO postgres;
-=======
 ALTER TABLE public.product_ingredient OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: public.recipe | type: TABLE --
@@ -292,11 +243,7 @@ CREATE TABLE public.recipe (
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.recipe OWNER TO postgres;
-=======
 ALTER TABLE public.recipe OWNER TO postgres;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: public.stock | type: TABLE --
@@ -307,26 +254,12 @@ CREATE TABLE public.stock (
 	unity varchar(50) NOT NULL,
 	price_per_unit decimal,
 	id_restaurant integer NOT NULL,
-<<<<<<< HEAD
 	id_product integer,
-=======
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 	CONSTRAINT stock_pk PRIMARY KEY (id)
 
 );
 -- ddl-end --
-<<<<<<< HEAD
--- ALTER TABLE public.stock OWNER TO postgres;
-=======
 ALTER TABLE public.stock OWNER TO postgres;
--- ddl-end --
-
--- object: stock_fk | type: CONSTRAINT --
--- ALTER TABLE public.product DROP CONSTRAINT IF EXISTS stock_fk CASCADE;
-ALTER TABLE public.product ADD CONSTRAINT stock_fk FOREIGN KEY (id_stock)
-REFERENCES public.stock (id) MATCH FULL
-ON DELETE RESTRICT ON UPDATE CASCADE;
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 -- ddl-end --
 
 -- object: restaurant_fk | type: CONSTRAINT --
@@ -369,7 +302,6 @@ REFERENCES public.product (id) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
-<<<<<<< HEAD
 -- object: product_fk | type: CONSTRAINT --
 -- ALTER TABLE public.stock DROP CONSTRAINT IF EXISTS product_fk CASCADE;
 ALTER TABLE public.stock ADD CONSTRAINT product_fk FOREIGN KEY (id_product)
@@ -377,6 +309,4 @@ REFERENCES public.product (id) MATCH FULL
 ON DELETE SET NULL ON UPDATE CASCADE;
 -- ddl-end --
 
-=======
->>>>>>> caf16f7bb1c38937050bf594c3ddc5a9167e4e75
 
