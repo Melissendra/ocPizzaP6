@@ -9,12 +9,12 @@ VALUES ('pizzaiolo'),
         ('client'),
         ('manager');
 
-INSERT INTO public.user(lastname, firstname, birthday, user_category, used_password, active)
-VALUES ( 'Lacroix', 'Tristan', '1998-30-03', 1, 'IdBX6UT', TRUE),
-        ( 'Dufour', 'Emilie', '1984-25-12', 2, '06Jv2uV1', TRUE),
-        ( 'Louis', 'Jacques', '1997-30-06', 3, 'K5wkf45W', FALSE),
-        ( 'Blot', 'Hughes', '1980-29-05', 4, 'kzN9McLXIIv5', TRUE),
-        ( 'Pichon', 'Capucine', '1970-26-01', 3, 'aYkrEZ', TRUE);
+INSERT INTO public.user(lastname, firstname, birthday, used_password, active, id_restaurant, id_category)
+VALUES ( 'Lacroix', 'Tristan', '1998-30-03','IdBX6UT', TRUE, 2, 1),
+        ( 'Dufour', 'Emilie', '1984-25-12', '06Jv2uV1', TRUE, 3, 2),
+        ( 'Louis', 'Jacques', '1997-30-06', 'K5wkf45W', FALSE, 1, 3),
+        ( 'Blot', 'Hughes', '1980-29-05', 'kzN9McLXIIv5', TRUE, 2, 3),
+        ( 'Pichon', 'Capucine', '1970-26-01', 'aYkrEZ', TRUE, 3, 4);
 
 INSERT INTO public.address(street_number, street_name,zip_code, city, phone_number, mail, id_user, id_restaurant)
 VALUES ('5', 'rue Noël Barbier', '45895', 'Chartier', '06 37 38 03 50', 'tristan24@free.fr',
