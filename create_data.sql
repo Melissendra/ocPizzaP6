@@ -37,8 +37,8 @@ CREATE TABLE public."user" (
 	lastname varchar(255) NOT NULL,
 	firstname varchar(255) NOT NULL,
 	birthday varchar(255) NOT NULL,
-	used_password varchar(255),
-	active boolean NOT NULL,
+	used_password varchar(255) NOT NULL,
+	activity boolean NOT NULL,
 	id_restaurant integer,
 	id_category integer,
 	CONSTRAINT utilisateur_pk PRIMARY KEY (id)

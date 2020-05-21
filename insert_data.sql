@@ -9,7 +9,7 @@ VALUES ('pizzaiolo'),
         ('client'),
         ('manager');
 
-INSERT INTO public.user(lastname, firstname, birthday, used_password, active, id_category, id_restaurant)
+INSERT INTO public.user(lastname, firstname, birthday, used_password, activity, id_category, id_restaurant)
 VALUES ( 'Lacroix', 'Tristan', '1998-30-03', 'IdBX6UT', TRUE, 1, 1),
         ( 'Dufour', 'Emilie', '1984-25-12', '06Jv2uV1', TRUE, 2, 2),
         ( 'Louis', 'Jacques', '1997-30-06', 'K5wkf45W', FALSE, 3, 3),

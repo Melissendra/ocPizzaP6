@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: address; Type: TABLE; Schema: public; Owner: postgres
+-- Name: address; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.address (
@@ -37,10 +37,8 @@ CREATE TABLE public.address (
 );
 
 
-ALTER TABLE public.address OWNER TO postgres;
-
 --
--- Name: address_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: address_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.address ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -54,7 +52,7 @@ ALTER TABLE public.address ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: basket_line; Type: TABLE; Schema: public; Owner: postgres
+-- Name: basket_line; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.basket_line (
@@ -67,10 +65,8 @@ CREATE TABLE public.basket_line (
 );
 
 
-ALTER TABLE public.basket_line OWNER TO postgres;
-
 --
--- Name: basket_line_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: basket_line_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.basket_line ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -84,7 +80,7 @@ ALTER TABLE public.basket_line ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY 
 
 
 --
--- Name: category; Type: TABLE; Schema: public; Owner: postgres
+-- Name: category; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.category (
@@ -93,10 +89,8 @@ CREATE TABLE public.category (
 );
 
 
-ALTER TABLE public.category OWNER TO postgres;
-
 --
--- Name: category_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: category_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.category ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -110,7 +104,7 @@ ALTER TABLE public.category ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: order; Type: TABLE; Schema: public; Owner: postgres
+-- Name: order; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public."order" (
@@ -125,10 +119,8 @@ CREATE TABLE public."order" (
 );
 
 
-ALTER TABLE public."order" OWNER TO postgres;
-
 --
--- Name: order_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: order_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public."order" ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -142,7 +134,7 @@ ALTER TABLE public."order" ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: order_state; Type: TABLE; Schema: public; Owner: postgres
+-- Name: order_state; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.order_state (
@@ -151,10 +143,8 @@ CREATE TABLE public.order_state (
 );
 
 
-ALTER TABLE public.order_state OWNER TO postgres;
-
 --
--- Name: order_state_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: order_state_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.order_state ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -168,7 +158,7 @@ ALTER TABLE public.order_state ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY 
 
 
 --
--- Name: payment_mean_table; Type: TABLE; Schema: public; Owner: postgres
+-- Name: payment_mean_table; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.payment_mean_table (
@@ -177,10 +167,8 @@ CREATE TABLE public.payment_mean_table (
 );
 
 
-ALTER TABLE public.payment_mean_table OWNER TO postgres;
-
 --
--- Name: payment_mean_table_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: payment_mean_table_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.payment_mean_table ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -194,7 +182,7 @@ ALTER TABLE public.payment_mean_table ALTER COLUMN id ADD GENERATED ALWAYS AS ID
 
 
 --
--- Name: product; Type: TABLE; Schema: public; Owner: postgres
+-- Name: product; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.product (
@@ -204,10 +192,8 @@ CREATE TABLE public.product (
 );
 
 
-ALTER TABLE public.product OWNER TO postgres;
-
 --
--- Name: product_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: product_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.product ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -221,7 +207,7 @@ ALTER TABLE public.product ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: product_ingredient; Type: TABLE; Schema: public; Owner: postgres
+-- Name: product_ingredient; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.product_ingredient (
@@ -233,10 +219,8 @@ CREATE TABLE public.product_ingredient (
 );
 
 
-ALTER TABLE public.product_ingredient OWNER TO postgres;
-
 --
--- Name: product_ingredient_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: product_ingredient_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.product_ingredient ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -250,7 +234,7 @@ ALTER TABLE public.product_ingredient ALTER COLUMN id ADD GENERATED ALWAYS AS ID
 
 
 --
--- Name: recipe; Type: TABLE; Schema: public; Owner: postgres
+-- Name: recipe; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.recipe (
@@ -260,10 +244,8 @@ CREATE TABLE public.recipe (
 );
 
 
-ALTER TABLE public.recipe OWNER TO postgres;
-
 --
--- Name: recipe_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: recipe_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.recipe ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -277,7 +259,7 @@ ALTER TABLE public.recipe ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: restaurant; Type: TABLE; Schema: public; Owner: postgres
+-- Name: restaurant; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.restaurant (
@@ -286,10 +268,8 @@ CREATE TABLE public.restaurant (
 );
 
 
-ALTER TABLE public.restaurant OWNER TO postgres;
-
 --
--- Name: restaurant_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: restaurant_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.restaurant ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -303,7 +283,7 @@ ALTER TABLE public.restaurant ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: stock; Type: TABLE; Schema: public; Owner: postgres
+-- Name: stock; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.stock (
@@ -316,10 +296,8 @@ CREATE TABLE public.stock (
 );
 
 
-ALTER TABLE public.stock OWNER TO postgres;
-
 --
--- Name: stock_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: stock_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public.stock ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -333,7 +311,7 @@ ALTER TABLE public.stock ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Name: user; Type: TABLE; Schema: public; Owner: postgres
+-- Name: user; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public."user" (
@@ -341,17 +319,15 @@ CREATE TABLE public."user" (
     lastname character varying(255) NOT NULL,
     firstname character varying(255) NOT NULL,
     birthday character varying(255) NOT NULL,
-    used_password character varying(255),
-    active boolean NOT NULL,
+    used_password character varying(255) NOT NULL,
+    activity boolean NOT NULL,
     id_restaurant integer,
     id_category integer
 );
 
 
-ALTER TABLE public."user" OWNER TO postgres;
-
 --
--- Name: user_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: user_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
 ALTER TABLE public."user" ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
@@ -365,7 +341,7 @@ ALTER TABLE public."user" ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
--- Data for Name: address; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: address; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.address (id, street_number, street_name, zip_code, city, phone_number, mail, id_user, id_restaurant) FROM stdin;
@@ -381,7 +357,7 @@ COPY public.address (id, street_number, street_name, zip_code, city, phone_numbe
 
 
 --
--- Data for Name: basket_line; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: basket_line; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.basket_line (id, basket_date, product_amount, price, id_product, id_order) FROM stdin;
@@ -402,7 +378,7 @@ COPY public.basket_line (id, basket_date, product_amount, price, id_product, id_
 
 
 --
--- Data for Name: category; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: category; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.category (id, category_name) FROM stdin;
@@ -414,7 +390,7 @@ COPY public.category (id, category_name) FROM stdin;
 
 
 --
--- Data for Name: order; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: order; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public."order" (id, order_date, paiement_state, delivery, id_restaurant, id_address, id_payment_mean_table, id_order_state) FROM stdin;
@@ -431,7 +407,7 @@ COPY public."order" (id, order_date, paiement_state, delivery, id_restaurant, id
 
 
 --
--- Data for Name: order_state; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: order_state; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.order_state (id, preparation_state) FROM stdin;
@@ -444,7 +420,7 @@ COPY public.order_state (id, preparation_state) FROM stdin;
 
 
 --
--- Data for Name: payment_mean_table; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: payment_mean_table; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.payment_mean_table (id, payment_mean) FROM stdin;
@@ -455,7 +431,7 @@ COPY public.payment_mean_table (id, payment_mean) FROM stdin;
 
 
 --
--- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: product; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.product (id, product_name, id_recipe) FROM stdin;
@@ -481,7 +457,7 @@ COPY public.product (id, product_name, id_recipe) FROM stdin;
 
 
 --
--- Data for Name: product_ingredient; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: product_ingredient; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.product_ingredient (id, ingredient_quantity, measure_unity, id_product, id_ingredient) FROM stdin;
@@ -494,7 +470,7 @@ COPY public.product_ingredient (id, ingredient_quantity, measure_unity, id_produ
 
 
 --
--- Data for Name: recipe; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: recipe; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.recipe (id, recipe_name, description) FROM stdin;
@@ -505,7 +481,7 @@ COPY public.recipe (id, recipe_name, description) FROM stdin;
 
 
 --
--- Data for Name: restaurant; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: restaurant; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.restaurant (id, name) FROM stdin;
@@ -516,7 +492,7 @@ COPY public.restaurant (id, name) FROM stdin;
 
 
 --
--- Data for Name: stock; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: stock; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.stock (id, quantity, unity, price_per_unit, id_restaurant, id_product) FROM stdin;
@@ -538,10 +514,10 @@ COPY public.stock (id, quantity, unity, price_per_unit, id_restaurant, id_produc
 
 
 --
--- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public."user" (id, lastname, firstname, birthday, used_password, active, id_restaurant, id_category) FROM stdin;
+COPY public."user" (id, lastname, firstname, birthday, used_password, activity, id_restaurant, id_category) FROM stdin;
 1	Lacroix	Tristan	1998-30-03	IdBX6UT	t	1	1
 2	Dufour	Emilie	1984-25-12	06Jv2uV1	t	2	2
 3	Louis	Jacques	1997-30-06	K5wkf45W	f	3	3
@@ -551,91 +527,91 @@ COPY public."user" (id, lastname, firstname, birthday, used_password, active, id
 
 
 --
--- Name: address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: address_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.address_id_seq', 8, true);
 
 
 --
--- Name: basket_line_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: basket_line_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.basket_line_id_seq', 13, true);
 
 
 --
--- Name: category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.category_id_seq', 4, true);
 
 
 --
--- Name: order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: order_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.order_id_seq', 9, true);
 
 
 --
--- Name: order_state_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: order_state_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.order_state_id_seq', 5, true);
 
 
 --
--- Name: payment_mean_table_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: payment_mean_table_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.payment_mean_table_id_seq', 3, true);
 
 
 --
--- Name: product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: product_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.product_id_seq', 18, true);
 
 
 --
--- Name: product_ingredient_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: product_ingredient_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.product_ingredient_id_seq', 5, true);
 
 
 --
--- Name: recipe_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: recipe_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.recipe_id_seq', 3, true);
 
 
 --
--- Name: restaurant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: restaurant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.restaurant_id_seq', 3, true);
 
 
 --
--- Name: stock_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: stock_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.stock_id_seq', 14, true);
 
 
 --
--- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.user_id_seq', 5, true);
 
 
 --
--- Name: restaurant Restaurant_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: restaurant Restaurant_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.restaurant
@@ -643,7 +619,7 @@ ALTER TABLE ONLY public.restaurant
 
 
 --
--- Name: address address_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: address address_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.address
@@ -651,7 +627,7 @@ ALTER TABLE ONLY public.address
 
 
 --
--- Name: address address_uq; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: address address_uq; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.address
@@ -659,7 +635,7 @@ ALTER TABLE ONLY public.address
 
 
 --
--- Name: basket_line basket_line_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: basket_line basket_line_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.basket_line
@@ -667,7 +643,7 @@ ALTER TABLE ONLY public.basket_line
 
 
 --
--- Name: category function_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: category function_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.category
@@ -675,7 +651,7 @@ ALTER TABLE ONLY public.category
 
 
 --
--- Name: order order_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order order_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."order"
@@ -683,7 +659,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- Name: order_state order_state_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order_state order_state_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.order_state
@@ -691,7 +667,7 @@ ALTER TABLE ONLY public.order_state
 
 
 --
--- Name: payment_mean_table payment_mean_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: payment_mean_table payment_mean_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.payment_mean_table
@@ -699,7 +675,7 @@ ALTER TABLE ONLY public.payment_mean_table
 
 
 --
--- Name: product_ingredient product_ingredient_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_ingredient product_ingredient_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_ingredient
@@ -707,7 +683,7 @@ ALTER TABLE ONLY public.product_ingredient
 
 
 --
--- Name: product product_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product product_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product
@@ -715,7 +691,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- Name: product product_uq; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product product_uq; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product
@@ -723,7 +699,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- Name: recipe recipes_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recipe recipes_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.recipe
@@ -731,7 +707,7 @@ ALTER TABLE ONLY public.recipe
 
 
 --
--- Name: stock stock_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock stock_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stock
@@ -739,7 +715,7 @@ ALTER TABLE ONLY public.stock
 
 
 --
--- Name: user utilisateur_pk; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user utilisateur_pk; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."user"
@@ -747,7 +723,7 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- Name: order address_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order address_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."order"
@@ -755,7 +731,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- Name: user category_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user category_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."user"
@@ -763,7 +739,7 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- Name: basket_line order_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: basket_line order_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.basket_line
@@ -771,7 +747,7 @@ ALTER TABLE ONLY public.basket_line
 
 
 --
--- Name: order order_state_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order order_state_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."order"
@@ -779,7 +755,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- Name: order payment_mean_table_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order payment_mean_table_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."order"
@@ -787,7 +763,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- Name: basket_line product_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: basket_line product_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.basket_line
@@ -795,7 +771,7 @@ ALTER TABLE ONLY public.basket_line
 
 
 --
--- Name: product_ingredient product_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_ingredient product_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_ingredient
@@ -803,7 +779,7 @@ ALTER TABLE ONLY public.product_ingredient
 
 
 --
--- Name: stock product_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock product_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stock
@@ -811,7 +787,7 @@ ALTER TABLE ONLY public.stock
 
 
 --
--- Name: product_ingredient product_fk1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product_ingredient product_fk1; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product_ingredient
@@ -819,7 +795,7 @@ ALTER TABLE ONLY public.product_ingredient
 
 
 --
--- Name: product recipe_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: product recipe_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.product
@@ -827,7 +803,7 @@ ALTER TABLE ONLY public.product
 
 
 --
--- Name: user restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: user restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."user"
@@ -835,7 +811,7 @@ ALTER TABLE ONLY public."user"
 
 
 --
--- Name: address restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: address restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.address
@@ -843,7 +819,7 @@ ALTER TABLE ONLY public.address
 
 
 --
--- Name: order restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: order restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public."order"
@@ -851,7 +827,7 @@ ALTER TABLE ONLY public."order"
 
 
 --
--- Name: stock restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: stock restaurant_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.stock
@@ -859,7 +835,7 @@ ALTER TABLE ONLY public.stock
 
 
 --
--- Name: address user_fk; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: address user_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.address
