@@ -12,9 +12,9 @@ VALUES ('pizzaiolo'),
 INSERT INTO public.user(lastname, firstname, birthday, used_password, activity, id_category, id_restaurant)
 VALUES ( 'Lacroix', 'Tristan', '1998-30-03', 'IdBX6UT', TRUE, 1, 1),
         ( 'Dufour', 'Emilie', '1984-25-12', '06Jv2uV1', TRUE, 2, 2),
-        ( 'Louis', 'Jacques', '1997-30-06', 'K5wkf45W', FALSE, 3, 3),
+        ( 'Louis', 'Jacques', '1997-30-06', 'K5wkf45W', FALSE, 3, NULL),
         ( 'Blot', 'Hughes', '1980-29-05', 'kzN9McLXIIv5', TRUE, 4, 1),
-        ( 'Pichon', 'Capucine', '1970-26-01', 'aYkrEZ', TRUE, 3, 2);
+        ( 'Pichon', 'Capucine', '1970-26-01', 'aYkrEZ', TRUE, 3, NULL);
 
 INSERT INTO public.address(street_number, street_name,zip_code, city, phone_number, mail, id_user, id_restaurant)
 VALUES ('5', 'rue Noël Barbier', '45895', 'Chartier', '06 37 38 03 50', 'tristan24@free.fr',
